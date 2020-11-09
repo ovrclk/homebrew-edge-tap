@@ -2,28 +2,27 @@
 class Akash < Formula
   desc "Blockchain-powered decentralized compute platform"
   homepage "https://akash.network"
-  version "0.8.2"
+  version "0.7.21-doubletap.rc23"
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/ovrclk/akash/releases/download/v0.8.2/akash_0.8.2_darwin_amd64.zip"
-    sha256 "cba0f7227c3cf428b58c7349333934ed6e342c1c3aa9739ea578eccb3bd7a035"
+    url "https://github.com/ovrclk/akash/releases/download/v0.7.21-doubletap.rc23/akash_0.7.21-doubletap.rc23_darwin_amd64.zip"
+    sha256 "0047f9566447fe72f3dd01cc7611a1cbe28e7f084f8ad3c97c3d1830f412375b"
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/ovrclk/akash/releases/download/v0.8.2/akash_0.8.2_linux_amd64.zip"
-      sha256 "cee56a437646e8d044aa94387ed4486a12e81703ff1ae8c5597b0f46e45bfe6b"
+      url "https://github.com/ovrclk/akash/releases/download/v0.7.21-doubletap.rc23/akash_0.7.21-doubletap.rc23_linux_amd64.zip"
+      sha256 "5ae09094e6cb6d5af37295d618fe0b04328565d3cb6dee297c45dc352403ee12"
     end
     if Hardware::CPU.arm?
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/ovrclk/akash/releases/download/v0.8.2/akash_0.8.2_linux_arm64.zip"
-        sha256 "2a8387a91a408131371c783303a1a9574bbe4793040012dd6f542135af6a623a"
+        url "https://github.com/ovrclk/akash/releases/download/v0.7.21-doubletap.rc23/akash_0.7.21-doubletap.rc23_linux_arm64.zip"
+        sha256 "c1281a90a26051f795f317bc2c50ba2b12dad7aae3326fa5fd73a2e3e0dc5227"
       else
       end
     end
   end
 
   def install
-    bin.install "akashctl"
-    bin.install "akashd"
+    bin.install "akash"
   end
 end
