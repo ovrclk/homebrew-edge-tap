@@ -7,7 +7,7 @@ Homebrew repository for Akash packages.
 Add the ovrclk tap, using the below and execute the below to install Akash Suite. 
 
 ```sh
-brew tap ovrclk/tap
+brew tap ovrclk/edge-tap
 brew install akash
 ```
 
